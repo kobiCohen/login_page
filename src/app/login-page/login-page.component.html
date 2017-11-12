@@ -1,14 +1,13 @@
 <div id="main-form">
-<br>
-   
-    <div id="frm">
+  <div class="loader" *ngIf= "wasClicked"></div>
+    <div id="frm" *ngIf="!wasClicked">
       
-      <div class="contaner">
+      <div class="contaner" >
 
  
         <div id= "image">
             <img  src="http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/72/mail-icon.png" >
-            <br>
+            
             <p>Welcome To
               <br>
               <b>Mail App</b>
@@ -19,8 +18,8 @@
            <div class="arrow"></div>
          </div>      
           </div>
-          
-      <div class= "card">
+    
+      <div class= "card" >
          <div id="card-content">
             <div class="input-group">
                 <input  id ="login-form" type="text" class="form-control" placeholder="Enter your name" aria-describedby="basic-addon1"> 
@@ -30,9 +29,12 @@
                 <input  id ="login-form" type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
                 <span class="input-group-addon" id="basic-addon1"><i class="material-icons">lock</i></span>
               </div>
-                <button id ="btn" type="button" class="btn btn-primary btn-block">Login</button>
+                <button id ="btn" type="button" class="btn btn-primary btn-block" (click)="loginClicked()">Login</button>
                 <a id="under-form" href="">Lost your password?</a>
+                
          </div>
       </div>
+      
+      
     </div>
 </div>

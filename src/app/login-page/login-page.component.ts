@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+
+
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -7,10 +10,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class LoginPageComponent implements OnInit {
-
+  private wasClicked:boolean;
   constructor() { }
 
   ngOnInit() {
+    this.wasClicked = false;
+  }
+  loginClicked(){
+    console.log("click")
+    this.wasClicked = true;
   }
 
 }
